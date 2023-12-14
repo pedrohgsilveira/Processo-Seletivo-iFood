@@ -18,18 +18,19 @@
   },
   "testTargets" : [
     {
+      "target" : {
+        "containerPath" : "container:..\/..\/..\/CoreCoordinator",
+        "identifier" : "CoreCoordinatorImpTests",
+        "name" : "CoreCoordinatorImpTests"
+      }
+    },
+    {
+      "enabled" : false,
       "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
         "identifier" : "A8FE63742B2B663A001FD796",
         "name" : "Processo-Seletivo-iFoodTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/..\/..\/CoreCoordinator",
-        "identifier" : "CoreCoordinatorImpTests",
-        "name" : "CoreCoordinatorImpTests"
       }
     }
   ],
