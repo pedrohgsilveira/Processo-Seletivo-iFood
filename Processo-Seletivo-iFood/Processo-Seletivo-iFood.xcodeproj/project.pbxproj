@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8585B9E2B2B9FB900A63720 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8585B9D2B2B9FB900A63720 /* SnapKit */; };
 		A8FE63632B2B6638001FD796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63622B2B6638001FD796 /* AppDelegate.swift */; };
 		A8FE63652B2B6638001FD796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63642B2B6638001FD796 /* SceneDelegate.swift */; };
 		A8FE63672B2B6638001FD796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63662B2B6638001FD796 /* ViewController.swift */; };
@@ -28,8 +29,9 @@
 
 /* Begin PBXFileReference section */
 		A82D621D2B2B7E1200DAF87E /* AppBaseTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppBaseTestPlan.xctestplan; sourceTree = "<group>"; };
-		A8585B9A2B2B9D6000A63720 /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreCoordinator; sourceTree = "<group>"; };
-		A8585B9B2B2B9D6A00A63720 /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreNetwork; sourceTree = "<group>"; };
+		A8769B942B2BA0BB00920D67 /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../CoreCoordinator; sourceTree = "<group>"; };
+		A8769B952B2BA0BE00920D67 /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreNetwork; path = ../CoreNetwork; sourceTree = "<group>"; };
+		A8769B962B2BA0C300920D67 /* UIFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIFoundation; path = ../UIFoundation; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8585B9E2B2B9FB900A63720 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,19 +78,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A8585B992B2B9D6000A63720 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				A8585B9A2B2B9D6000A63720 /* CoreCoordinator */,
-				A8585B9B2B2B9D6A00A63720 /* CoreNetwork */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
-				A8585B992B2B9D6000A63720 /* Packages */,
+				A8769B962B2BA0C300920D67 /* UIFoundation */,
+				A8769B952B2BA0BE00920D67 /* CoreNetwork */,
+				A8769B942B2BA0BB00920D67 /* CoreCoordinator */,
 				A8FE63612B2B6638001FD796 /* Processo-Seletivo-iFood */,
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63602B2B6638001FD796 /* Products */,
@@ -144,6 +140,7 @@
 			);
 			name = "Processo-Seletivo-iFood";
 			packageProductDependencies = (
+				A8585B9D2B2B9FB900A63720 /* SnapKit */,
 			);
 			productName = "Processo-Seletivo-iFood";
 			productReference = A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */;
@@ -195,6 +192,9 @@
 				Base,
 			);
 			mainGroup = A8FE63562B2B6638001FD796;
+			packageReferences = (
+				A8585B9C2B2B9FB900A63720 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A8FE63602B2B6638001FD796 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -511,6 +511,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8585B9C2B2B9FB900A63720 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8585B9D2B2B9FB900A63720 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8585B9C2B2B9FB900A63720 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8FE63572B2B6638001FD796 /* Project object */;
 }
