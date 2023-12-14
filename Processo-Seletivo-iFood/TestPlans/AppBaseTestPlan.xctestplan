@@ -18,6 +18,14 @@
         "identifier" : "CoreCoordinatorImpTests",
         "name" : "CoreCoordinatorImpTests"
       }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
+        "identifier" : "A8FE63742B2B663A001FD796",
+        "name" : "Processo-Seletivo-iFoodTests"
+      }
     }
   ],
   "version" : 1
