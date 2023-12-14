@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "38569C0D-9A1F-4CAC-985D-AEF8D3DA8641",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
+      "identifier" : "A8FE635E2B2B6638001FD796",
+      "name" : "Processo-Seletivo-iFood"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
+        "identifier" : "A8FE63742B2B663A001FD796",
+        "name" : "Processo-Seletivo-iFoodTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/..\/CoreCoordinator",
+        "identifier" : "CoreCoordinatorImpTests",
+        "name" : "CoreCoordinatorImpTests"
+      }
+    }
+  ],
+  "version" : 1
+}
