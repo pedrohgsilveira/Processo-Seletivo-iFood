@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A82D62202B2B85A300DAF87E /* CoreCoordinatorImp in Frameworks */ = {isa = PBXBuildFile; productRef = A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */; };
-		A82D62222B2B85A700DAF87E /* CoreCoordinatorPub in Frameworks */ = {isa = PBXBuildFile; productRef = A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */; };
 		A8FE63632B2B6638001FD796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63622B2B6638001FD796 /* AppDelegate.swift */; };
 		A8FE63652B2B6638001FD796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63642B2B6638001FD796 /* SceneDelegate.swift */; };
 		A8FE63672B2B6638001FD796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63662B2B6638001FD796 /* ViewController.swift */; };
@@ -29,8 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A82D62192B2B77BE00DAF87E /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../../../CoreCoordinator; sourceTree = "<group>"; };
 		A82D621D2B2B7E1200DAF87E /* AppBaseTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppBaseTestPlan.xctestplan; sourceTree = "<group>"; };
+		A82D62242B2B868300DAF87E /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../../../CoreCoordinator; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A82D62222B2B85A700DAF87E /* CoreCoordinatorPub in Frameworks */,
-				A82D62202B2B85A300DAF87E /* CoreCoordinatorImp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,14 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A82D62182B2B77BE00DAF87E /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				A82D62192B2B77BE00DAF87E /* CoreCoordinator */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		A82D621C2B2B798400DAF87E /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +77,7 @@
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
-				A82D62182B2B77BE00DAF87E /* Packages */,
+				A82D62242B2B868300DAF87E /* CoreCoordinator */,
 				A8FE63612B2B6638001FD796 /* Processo-Seletivo-iFood */,
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63602B2B6638001FD796 /* Products */,
@@ -146,8 +134,6 @@
 			);
 			name = "Processo-Seletivo-iFood";
 			packageProductDependencies = (
-				A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */,
-				A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */,
 			);
 			productName = "Processo-Seletivo-iFood";
 			productReference = A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */;
@@ -515,17 +501,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CoreCoordinatorImp;
-		};
-		A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CoreCoordinatorPub;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8FE63572B2B6638001FD796 /* Project object */;
 }
