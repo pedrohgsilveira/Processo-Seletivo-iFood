@@ -28,8 +28,8 @@
 
 /* Begin PBXFileReference section */
 		A82D621D2B2B7E1200DAF87E /* AppBaseTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppBaseTestPlan.xctestplan; sourceTree = "<group>"; };
-		A82D62242B2B868300DAF87E /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../../../CoreCoordinator; sourceTree = "<group>"; };
-		A82D62262B2B9BCE00DAF87E /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreNetwork; path = ../../../CoreNetwork; sourceTree = "<group>"; };
+		A8585B9A2B2B9D6000A63720 /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreCoordinator; sourceTree = "<group>"; };
+		A8585B9B2B2B9D6A00A63720 /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreNetwork; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,11 +75,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A8585B992B2B9D6000A63720 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A8585B9A2B2B9D6000A63720 /* CoreCoordinator */,
+				A8585B9B2B2B9D6A00A63720 /* CoreNetwork */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
-				A82D62262B2B9BCE00DAF87E /* CoreNetwork */,
-				A82D62242B2B868300DAF87E /* CoreCoordinator */,
+				A8585B992B2B9D6000A63720 /* Packages */,
 				A8FE63612B2B6638001FD796 /* Processo-Seletivo-iFood */,
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63602B2B6638001FD796 /* Products */,
