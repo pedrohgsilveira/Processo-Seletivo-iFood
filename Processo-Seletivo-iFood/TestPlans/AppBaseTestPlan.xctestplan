@@ -13,7 +13,6 @@
   },
   "testTargets" : [
     {
-      "enabled" : false,
       "target" : {
         "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
         "identifier" : "A8FE63742B2B663A001FD796",
