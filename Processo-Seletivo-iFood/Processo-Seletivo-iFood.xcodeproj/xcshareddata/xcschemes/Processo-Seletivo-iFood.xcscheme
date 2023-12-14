@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Processo-Seletivo-iFood.xcodeproj/Processo-Seletivo-iFood.xctestplan"
+            reference = "container:TestPlans/MainAppTestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
