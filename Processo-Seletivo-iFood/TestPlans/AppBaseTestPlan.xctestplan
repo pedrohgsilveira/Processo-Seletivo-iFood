@@ -25,6 +25,13 @@
         "identifier" : "CoreCoordinatorImpTests",
         "name" : "CoreCoordinatorImpTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/..\/CoreNetwork",
+        "identifier" : "CoreNetworkImpTests",
+        "name" : "CoreNetworkImpTests"
+      }
     }
   ],
   "version" : 1
