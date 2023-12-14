@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "AA8A13C8-A05A-4AFA-B9FB-2C8D4DFB7460",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
+        "identifier" : "A8FE63742B2B663A001FD796",
+        "name" : "Processo-Seletivo-iFoodTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/..\/CoreCoordinator",
+        "identifier" : "CoreCoordinatorImpTests",
+        "name" : "CoreCoordinatorImpTests"
+      }
+    }
+  ],
+  "version" : 1
+}
