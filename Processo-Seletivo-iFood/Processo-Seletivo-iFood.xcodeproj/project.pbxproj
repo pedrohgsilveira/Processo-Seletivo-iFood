@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A82D62192B2B77BE00DAF87E /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../../../CoreCoordinator; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +77,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A82D62182B2B77BE00DAF87E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A82D62192B2B77BE00DAF87E /* CoreCoordinator */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
+				A82D62182B2B77BE00DAF87E /* Packages */,
 				A8FE63612B2B6638001FD796 /* Processo-Seletivo-iFood */,
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63822B2B663B001FD796 /* Processo-Seletivo-iFoodUITests */,
