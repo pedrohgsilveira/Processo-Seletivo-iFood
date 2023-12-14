@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82D62202B2B85A300DAF87E /* CoreCoordinatorImp in Frameworks */ = {isa = PBXBuildFile; productRef = A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */; };
+		A82D62222B2B85A700DAF87E /* CoreCoordinatorPub in Frameworks */ = {isa = PBXBuildFile; productRef = A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */; };
 		A8FE63632B2B6638001FD796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63622B2B6638001FD796 /* AppDelegate.swift */; };
 		A8FE63652B2B6638001FD796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63642B2B6638001FD796 /* SceneDelegate.swift */; };
 		A8FE63672B2B6638001FD796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63662B2B6638001FD796 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82D62222B2B85A700DAF87E /* CoreCoordinatorPub in Frameworks */,
+				A82D62202B2B85A300DAF87E /* CoreCoordinatorImp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +79,13 @@
 			path = TestPlans;
 			sourceTree = "<group>";
 		};
+		A82D621E2B2B859C00DAF87E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +94,7 @@
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63602B2B6638001FD796 /* Products */,
 				A82D621C2B2B798400DAF87E /* TestPlans */,
+				A82D621E2B2B859C00DAF87E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +145,10 @@
 			dependencies = (
 			);
 			name = "Processo-Seletivo-iFood";
+			packageProductDependencies = (
+				A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */,
+				A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */,
+			);
 			productName = "Processo-Seletivo-iFood";
 			productReference = A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */;
 			productType = "com.apple.product-type.application";
@@ -499,6 +515,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A82D621F2B2B85A300DAF87E /* CoreCoordinatorImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreCoordinatorImp;
+		};
+		A82D62212B2B85A700DAF87E /* CoreCoordinatorPub */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreCoordinatorPub;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8FE63572B2B6638001FD796 /* Project object */;
 }
