@@ -7,10 +7,12 @@ let package = Package(
     name: "UIFoundation",
     platforms: [.iOS(.v16)],
     products: [
-        .library(name: "UIFoundationPub", targets: ["UIFoundationPub"])
+        .library(name: "UIFoundation", targets: ["UIFoundation"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
+    ],
     targets: [
-        .target(name: "UIFoundationPub")
+        .target(name: "UIFoundation", dependencies: ["SnapKit"])
     ]
 )

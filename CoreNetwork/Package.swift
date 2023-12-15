@@ -13,10 +13,7 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "CoreNetworkPub"),
-        .target(
-            name: "CoreNetworkImp",
-            dependencies: ["CoreNetworkPub"]
-        ),
+        .target(name: "CoreNetworkImp", dependencies: ["CoreNetworkPub"]),
         .testTarget(name: "CoreNetworkImpTests", dependencies: ["CoreNetworkImp"])
     ]
 )
