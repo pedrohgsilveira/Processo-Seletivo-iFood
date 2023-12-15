@@ -74,10 +74,6 @@ Adapter.Section.Item: Hashable {
         tableViewDataSource?.apply(snapshot)
     }
 
-    open func appendSection(_ section: Section) {
-        snapshot.appendSections([section])
-    }
-
     private func setupTableView() {
         separatorStyle = .singleLine
         delegate = tableViewDelegate
