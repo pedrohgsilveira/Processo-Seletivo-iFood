@@ -33,6 +33,8 @@
 		A8769B952B2BA0BE00920D67 /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreNetwork; path = ../CoreNetwork; sourceTree = "<group>"; };
 		A8769B962B2BA0C300920D67 /* UIFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIFoundation; path = ../UIFoundation; sourceTree = "<group>"; };
 		A8769B972B2C9FF400920D67 /* DependencyInjection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DependencyInjection; path = ../DependencyInjection; sourceTree = "<group>"; };
+		A8769B982B2CA7F600920D67 /* RepositoryList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RepositoryList; path = ../RepositoryList; sourceTree = "<group>"; };
+		A8769B992B2D10E400920D67 /* Redux */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Redux; path = ../Redux; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,15 +84,17 @@
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
-				A8769B972B2C9FF400920D67 /* DependencyInjection */,
-				A8769B962B2BA0C300920D67 /* UIFoundation */,
-				A8769B952B2BA0BE00920D67 /* CoreNetwork */,
 				A8769B942B2BA0BB00920D67 /* CoreCoordinator */,
+				A8769B952B2BA0BE00920D67 /* CoreNetwork */,
+				A8769B972B2C9FF400920D67 /* DependencyInjection */,
+				A8769B992B2D10E400920D67 /* Redux */,
+				A8769B982B2CA7F600920D67 /* RepositoryList */,
+				A8769B962B2BA0C300920D67 /* UIFoundation */,
+				A82D621E2B2B859C00DAF87E /* Frameworks */,
 				A8FE63612B2B6638001FD796 /* Processo-Seletivo-iFood */,
 				A8FE63782B2B663A001FD796 /* Processo-Seletivo-iFoodTests */,
 				A8FE63602B2B6638001FD796 /* Products */,
 				A82D621C2B2B798400DAF87E /* TestPlans */,
-				A82D621E2B2B859C00DAF87E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

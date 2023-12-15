@@ -1,5 +1,5 @@
-import UIKit
 import SnapKit
+import UIKit
 
 final class GenericErrorView: UIView {
     private let retryAction: () -> Void
@@ -8,7 +8,7 @@ final class GenericErrorView: UIView {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 32)
         label.textColor = .black
-        label.text = "Some error"
+        label.text = "An error occurred"
         label.numberOfLines = 0
         label.textAlignment = .center
 

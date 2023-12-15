@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "DependencyInjection",
+    platforms: [.iOS(.v16)],
     products: [
         .library(name: "DependencyInjection", targets: ["DependencyInjection"])
     ],
