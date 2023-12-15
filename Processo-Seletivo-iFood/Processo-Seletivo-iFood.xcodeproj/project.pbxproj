@@ -32,6 +32,7 @@
 		A8769B942B2BA0BB00920D67 /* CoreCoordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreCoordinator; path = ../CoreCoordinator; sourceTree = "<group>"; };
 		A8769B952B2BA0BE00920D67 /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreNetwork; path = ../CoreNetwork; sourceTree = "<group>"; };
 		A8769B962B2BA0C300920D67 /* UIFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UIFoundation; path = ../UIFoundation; sourceTree = "<group>"; };
+		A8769B972B2C9FF400920D67 /* DependencyInjection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DependencyInjection; path = ../DependencyInjection; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
+				A8769B972B2C9FF400920D67 /* DependencyInjection */,
 				A8769B962B2BA0C300920D67 /* UIFoundation */,
 				A8769B952B2BA0BE00920D67 /* CoreNetwork */,
 				A8769B942B2BA0BB00920D67 /* CoreCoordinator */,
