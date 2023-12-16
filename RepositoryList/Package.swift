@@ -39,6 +39,7 @@ let package = Package(
                 "RepositoryListPub",
                 "SnapKit"
             ]
-        )
+        ),
+        .testTarget(name: "RepositoryListImpTests", dependencies: ["RepositoryListImp"]),
     ]
 )

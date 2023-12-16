@@ -14,23 +14,23 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Processo-Seletivo-iFood.xcodeproj",
-        "identifier" : "A8FE63742B2B663A001FD796",
-        "name" : "Processo-Seletivo-iFoodTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/..\/..\/CoreCoordinator",
+        "containerPath" : "container:..\/CoreCoordinator",
         "identifier" : "CoreCoordinatorImpTests",
         "name" : "CoreCoordinatorImpTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:..\/..\/..\/CoreNetwork",
+        "containerPath" : "container:..\/CoreNetwork",
         "identifier" : "CoreNetworkImpTests",
         "name" : "CoreNetworkImpTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/RepositoryList",
+        "identifier" : "RepositoryListImpTests",
+        "name" : "RepositoryListImpTests"
       }
     }
   ],
