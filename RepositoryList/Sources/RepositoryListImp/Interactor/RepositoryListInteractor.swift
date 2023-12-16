@@ -22,7 +22,7 @@ RepositoryListMutation
         event: RepositoryListEvent
     ) -> AnyPublisher<RepositoryListMutation, Never> {
         switch event {
-        case let .fetchRepositoryList:
+        case .fetchRepositoryList:
             return handleFetchRepositoryList(state.currentPage)
         }
     }
@@ -36,7 +36,7 @@ RepositoryListMutation
         case .showError:
             currentState.screenState = .error
         case let .showRepositories(items):
-            currentState.items = items
+            currentState.items.append(contentsOf: items)
             currentState.screenState = .idle
             currentState.currentPage += 1
         }

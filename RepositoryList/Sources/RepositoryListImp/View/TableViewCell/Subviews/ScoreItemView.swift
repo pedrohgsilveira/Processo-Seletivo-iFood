@@ -47,13 +47,13 @@ extension ScoreItemView: ViewModelConfigurable {
 }
 
 extension ScoreItemView {
-    struct ViewModel: Hashable {
+    struct ViewModel: Equatable {
         let type: ScoreItemType
         let score: String
     }
 }
 
-enum ScoreItemType: String, Hashable {
+enum ScoreItemType: String, Equatable {
     case fork
     case star
 

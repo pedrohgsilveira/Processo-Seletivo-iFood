@@ -44,7 +44,7 @@ extension UserProfileView: ViewModelConfigurable {
 }
 
 extension UserProfileView {
-    struct ViewModel: Hashable {
+    struct ViewModel: Equatable {
         let userImage: UIImage
         let userName: String
     }

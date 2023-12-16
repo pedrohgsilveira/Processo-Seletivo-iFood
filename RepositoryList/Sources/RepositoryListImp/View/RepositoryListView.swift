@@ -2,10 +2,18 @@ import UIFoundation
 import UIKit
 
 final class RepositoryListView: LayoutView {
-    private let mainView = RepositoryListTableView(
-        didSelectRowHandler: { _ in },
-        didEndScroll: { }
-    )
+    private let didEndScroll: () -> Void
+
+    private lazy var mainView = RepositoryListTableView(didEndScroll: didEndScroll)
+
+    init(didEndScroll: @escaping () -> Void) {
+        self.didEndScroll = didEndScroll
+        super.init(frame: .zero)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func buildViewHierarchy() {
         addSubview(mainView)

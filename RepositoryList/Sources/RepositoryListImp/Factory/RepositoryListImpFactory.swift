@@ -20,7 +20,7 @@ public struct RepositoryListImpFactory: RepositoryListFactoryProtocol {
 
         presenter.viewController = viewController
 
-        viewController.executeInitialRequest()
+        viewController.executeFetchRequestRepositoryListRequest()
 
         return viewController
     }

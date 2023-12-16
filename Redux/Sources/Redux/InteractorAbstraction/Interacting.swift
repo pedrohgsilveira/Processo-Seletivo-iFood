@@ -25,7 +25,6 @@ Presenter: Presenting<State, ViewModel> {
                 let newState = self.reduce(state: self.currentState, mutation: mutation)
 
                 self.currentState = newState
-                print(newState)
                 self.presenter.input = newState
             }.store(in: &cancellables)
     }

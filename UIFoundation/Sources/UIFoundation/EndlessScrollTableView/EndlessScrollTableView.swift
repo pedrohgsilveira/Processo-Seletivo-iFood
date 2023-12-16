@@ -6,7 +6,6 @@ public protocol SectionModelType {
     var items: [Item] { get }
 }
 
-
 public protocol SectionAdapter {
     associatedtype Input
     associatedtype Section
@@ -23,21 +22,17 @@ Adapter.Section.Item: Hashable {
     public typealias Section = Adapter.Section
     public typealias Item = Section.Item
 
-    private let didSelectRowHandler: (IndexPath) -> Void
+    private var addedSessions: Set<Section> = []
 
     private let didEndScroll: () -> Void
 
-    private lazy var tableViewDelegate = EndlessScrollTableViewDelegate(didSelectRowAt: didSelectRowHandler, didEndScroll: didEndScroll)
+    private lazy var tableViewDelegate = EndlessScrollTableViewDelegate(didEndScroll: didEndScroll)
 
     private var tableViewDataSource: UITableViewDiffableDataSource<Section, Item>?
 
-    private var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-
     public init(
-        didSelectRowHandler: @escaping (IndexPath) -> Void,
         didEndScroll: @escaping () -> Void
     ) {
-        self.didSelectRowHandler = didSelectRowHandler
         self.didEndScroll = didEndScroll
 
         super.init(frame: .zero, style: .plain)
@@ -67,12 +62,14 @@ Adapter.Section.Item: Hashable {
     public func appendSections(
         from viewModel: ViewModel
     ) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+
         Adapter.adapt(viewModel).forEach { section in
             snapshot.appendSections([section])
             snapshot.appendItems(section.items, toSection: section)
         }
 
-        tableViewDataSource?.apply(snapshot)
+        tableViewDataSource?.apply(snapshot, animatingDifferences: false)
     }
 
     private func setupTableView() {

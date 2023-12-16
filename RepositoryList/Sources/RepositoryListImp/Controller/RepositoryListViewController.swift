@@ -3,8 +3,15 @@ import UIKit
 
 final class RepositoryListViewController: UIViewController {
     private let interactor: RepositoryListInteractor
+    private var canPerformFetchRepositoryListRequest: Bool = true
 
-    private let mainView = RepositoryListView()
+    private lazy var didEndScroll: () -> Void = { [weak self] in
+        guard let self else { return }
+
+        self.executeFetchRequestRepositoryListRequest()
+    }
+
+    private lazy var mainView = RepositoryListView(didEndScroll: didEndScroll)
 
     init(
         interactor: RepositoryListInteractor
@@ -23,8 +30,11 @@ final class RepositoryListViewController: UIViewController {
         view = mainView
     }
 
-    func executeInitialRequest() {
-        interactor.execute(event: .fetchRepositoryList)
+    func executeFetchRequestRepositoryListRequest() {
+        if canPerformFetchRepositoryListRequest {
+            interactor.execute(event: .fetchRepositoryList)
+            canPerformFetchRepositoryListRequest = false
+        }
     }
 }
 
@@ -32,13 +42,16 @@ extension RepositoryListViewController: RepositoryListViewControllerProtocol {
     func configure(with viewModel: RepositoryListViewModel) {
         switch viewModel.screenState {
         case .idle:
+            canPerformFetchRepositoryListRequest = true
             mainView.configure(with: viewModel)
             stopLoading()
 
         case .loading:
+            canPerformFetchRepositoryListRequest = false
             startLoading()
 
         case .error:
+            canPerformFetchRepositoryListRequest = true
             stopLoading()
             showErrorView { [weak self] in
                 guard let self else { return }
