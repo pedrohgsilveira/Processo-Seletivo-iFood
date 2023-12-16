@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A8585B9E2B2B9FB900A63720 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8585B9D2B2B9FB900A63720 /* SnapKit */; };
+		A8769B9C2B2DD4C400920D67 /* MainApp in Frameworks */ = {isa = PBXBuildFile; productRef = A8769B9B2B2DD4C400920D67 /* MainApp */; };
 		A8FE63632B2B6638001FD796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63622B2B6638001FD796 /* AppDelegate.swift */; };
 		A8FE63652B2B6638001FD796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63642B2B6638001FD796 /* SceneDelegate.swift */; };
 		A8FE63672B2B6638001FD796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63662B2B6638001FD796 /* ViewController.swift */; };
-		A8FE636A2B2B6638001FD796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FE63682B2B6638001FD796 /* Main.storyboard */; };
 		A8FE636C2B2B663A001FD796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FE636B2B2B663A001FD796 /* Assets.xcassets */; };
 		A8FE636F2B2B663A001FD796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FE636D2B2B663A001FD796 /* LaunchScreen.storyboard */; };
 		A8FE637A2B2B663A001FD796 /* Processo_Seletivo_iFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE63792B2B663A001FD796 /* Processo_Seletivo_iFoodTests.swift */; };
@@ -35,11 +34,11 @@
 		A8769B972B2C9FF400920D67 /* DependencyInjection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DependencyInjection; path = ../DependencyInjection; sourceTree = "<group>"; };
 		A8769B982B2CA7F600920D67 /* RepositoryList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RepositoryList; path = ../RepositoryList; sourceTree = "<group>"; };
 		A8769B992B2D10E400920D67 /* Redux */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Redux; path = ../Redux; sourceTree = "<group>"; };
+		A8769B9A2B2D148800920D67 /* MainApp */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MainApp; path = ../MainApp; sourceTree = "<group>"; };
 		A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Processo-Seletivo-iFood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8FE63622B2B6638001FD796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8FE63642B2B6638001FD796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A8FE63662B2B6638001FD796 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A8FE63692B2B6638001FD796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8FE636B2B2B663A001FD796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8FE636E2B2B663A001FD796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8FE63702B2B663A001FD796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8585B9E2B2B9FB900A63720 /* SnapKit in Frameworks */,
+				A8769B9C2B2DD4C400920D67 /* MainApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +83,7 @@
 		A8FE63562B2B6638001FD796 = {
 			isa = PBXGroup;
 			children = (
+				A8769B9A2B2D148800920D67 /* MainApp */,
 				A8769B942B2BA0BB00920D67 /* CoreCoordinator */,
 				A8769B952B2BA0BE00920D67 /* CoreNetwork */,
 				A8769B972B2C9FF400920D67 /* DependencyInjection */,
@@ -113,7 +113,6 @@
 				A8FE63622B2B6638001FD796 /* AppDelegate.swift */,
 				A8FE63642B2B6638001FD796 /* SceneDelegate.swift */,
 				A8FE63662B2B6638001FD796 /* ViewController.swift */,
-				A8FE63682B2B6638001FD796 /* Main.storyboard */,
 				A8FE636B2B2B663A001FD796 /* Assets.xcassets */,
 				A8FE636D2B2B663A001FD796 /* LaunchScreen.storyboard */,
 				A8FE63702B2B663A001FD796 /* Info.plist */,
@@ -146,7 +145,7 @@
 			);
 			name = "Processo-Seletivo-iFood";
 			packageProductDependencies = (
-				A8585B9D2B2B9FB900A63720 /* SnapKit */,
+				A8769B9B2B2DD4C400920D67 /* MainApp */,
 			);
 			productName = "Processo-Seletivo-iFood";
 			productReference = A8FE635F2B2B6638001FD796 /* Processo-Seletivo-iFood.app */;
@@ -218,7 +217,6 @@
 			files = (
 				A8FE636F2B2B663A001FD796 /* LaunchScreen.storyboard in Resources */,
 				A8FE636C2B2B663A001FD796 /* Assets.xcassets in Resources */,
-				A8FE636A2B2B6638001FD796 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +259,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A8FE63682B2B6638001FD796 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8FE63692B2B6638001FD796 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A8FE636D2B2B663A001FD796 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -405,7 +395,6 @@
 				INFOPLIST_FILE = "Processo-Seletivo-iFood/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,7 +421,6 @@
 				INFOPLIST_FILE = "Processo-Seletivo-iFood/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,10 +518,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A8585B9D2B2B9FB900A63720 /* SnapKit */ = {
+		A8769B9B2B2DD4C400920D67 /* MainApp */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A8585B9C2B2B9FB900A63720 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
+			productName = MainApp;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

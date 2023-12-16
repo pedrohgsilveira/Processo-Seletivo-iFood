@@ -104,7 +104,9 @@ extension RepositoryListTableViewCell: ViewModelConfigurable {
 }
 
 extension RepositoryListTableViewCell {
-    struct ViewModel: Hashable {
+    struct ViewModel: Equatable {
+        let identifier: UUID = UUID()
+
         let repositoryName: String
         let repositoryDescription: String
         let forkScoreViewModel: ScoreItemView.ViewModel

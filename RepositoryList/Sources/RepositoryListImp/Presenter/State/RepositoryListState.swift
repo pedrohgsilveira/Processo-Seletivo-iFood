@@ -5,9 +5,10 @@ import Redux
 struct RepositoryListState: StateAbstraction {
     var screenState: RepositoryListScreenState
     var items: [RepositoryItem]
+    var currentPage: Int
 
     static func initialState() -> RepositoryListState {
-        RepositoryListState(screenState: .idle, items: [])
+        RepositoryListState(screenState: .idle, items: [], currentPage: 1)
     }
 }
 

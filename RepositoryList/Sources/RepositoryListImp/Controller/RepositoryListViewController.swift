@@ -3,11 +3,15 @@ import UIKit
 
 final class RepositoryListViewController: UIViewController {
     private let interactor: RepositoryListInteractor
+    private var canPerformFetchRepositoryListRequest: Bool = true
 
-    private let mainView = RepositoryListTableView(
-        didSelectRowHandler: { _ in },
-        didEndScroll: { }
-    )
+    private lazy var didEndScroll: () -> Void = { [weak self] in
+        guard let self else { return }
+
+        self.executeFetchRequestRepositoryListRequest()
+    }
+
+    private lazy var mainView = RepositoryListView(didEndScroll: didEndScroll)
 
     init(
         interactor: RepositoryListInteractor
@@ -26,8 +30,11 @@ final class RepositoryListViewController: UIViewController {
         view = mainView
     }
 
-    override func viewDidLoad() {
-        interactor.execute(event: .fetchRepositoryList(page: 0))
+    func executeFetchRequestRepositoryListRequest() {
+        if canPerformFetchRepositoryListRequest {
+            interactor.execute(event: .fetchRepositoryList)
+            canPerformFetchRepositoryListRequest = false
+        }
     }
 }
 
@@ -35,17 +42,20 @@ extension RepositoryListViewController: RepositoryListViewControllerProtocol {
     func configure(with viewModel: RepositoryListViewModel) {
         switch viewModel.screenState {
         case .idle:
-            mainView.appendSections(from: viewModel)
+            canPerformFetchRepositoryListRequest = true
+            mainView.configure(with: viewModel)
             stopLoading()
 
         case .loading:
+            canPerformFetchRepositoryListRequest = false
             startLoading()
 
         case .error:
+            canPerformFetchRepositoryListRequest = true
             stopLoading()
             showErrorView { [weak self] in
                 guard let self else { return }
-                self.interactor.execute(event: .fetchRepositoryList(page: 0))
+                self.interactor.execute(event: .fetchRepositoryList)
             }
         }
     }
