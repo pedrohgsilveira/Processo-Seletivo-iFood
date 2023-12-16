@@ -8,7 +8,7 @@ struct RepositoryListState: StateAbstraction {
     var currentPage: Int
 
     static func initialState() -> RepositoryListState {
-        RepositoryListState(screenState: .idle, items: [], currentPage: 0)
+        RepositoryListState(screenState: .idle, items: [], currentPage: 1)
     }
 }
 

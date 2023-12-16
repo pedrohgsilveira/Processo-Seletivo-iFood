@@ -1,3 +1,4 @@
+import Kingfisher
 import UIFoundation
 import UIKit
 
@@ -26,6 +27,10 @@ final class UserProfileView: LayoutView {
         mainContainer.snp.makeConstraints { make in
             make.top.left.right.bottom.equalToSuperview()
         }
+
+        profileImageView.snp.makeConstraints { make in
+            make.height.width.equalTo(66)
+        }
     }
 
     override func setupAdditionalConfiguration() {
@@ -38,14 +43,16 @@ final class UserProfileView: LayoutView {
 
 extension UserProfileView: ViewModelConfigurable {
     func configure(with viewModel: ViewModel) {
-        profileImageView.image = viewModel.userImage
         userNameLabel.text = viewModel.userName
+
+        let url = URL(string: viewModel.userImageUrl)
+        profileImageView.kf.setImage(with: url)
     }
 }
 
 extension UserProfileView {
     struct ViewModel: Equatable {
-        let userImage: UIImage
+        let userImageUrl: String
         let userName: String
     }
 }

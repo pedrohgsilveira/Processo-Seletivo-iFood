@@ -16,6 +16,7 @@ let package = Package(
         .package(path: "../DependencyInjection"),
         .package(path: "../Redux"),
         .package(path: "../UIFoundation"),
+        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.1")),
         .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
     ],
     targets: [
@@ -34,6 +35,7 @@ let package = Package(
                 .product(name: "DependencyInjection", package: "DependencyInjection"),
                 .product(name: "Redux", package: "Redux"),
                 .product(name: "UIFoundation", package: "UIFoundation"),
+                "Kingfisher",
                 "RepositoryListPub",
                 "SnapKit"
             ]

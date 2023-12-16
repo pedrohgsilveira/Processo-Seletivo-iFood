@@ -28,6 +28,6 @@ extension RepositoryListTableViewCell.ViewModel {
 
 extension UserProfileView.ViewModel {
     init(from owner: RepositoryOwner) {
-        self.init(userImage: UIImage(), userName: owner.ownerName)
+        self.init(userImageUrl: owner.ownerProfileAvatarPath, userName: owner.ownerName)
     }
 }
