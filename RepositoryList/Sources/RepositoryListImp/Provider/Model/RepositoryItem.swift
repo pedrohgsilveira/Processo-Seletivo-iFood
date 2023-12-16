@@ -1,6 +1,6 @@
 import Foundation
 
-struct RepositoryOwner: Codable {
+struct RepositoryOwner: Codable, Equatable {
     let ownerName: String
     let ownerProfileAvatarPath: String
 
@@ -10,7 +10,7 @@ struct RepositoryOwner: Codable {
     }
 }
 
-struct RepositoryItem: Codable {
+struct RepositoryItem: Codable, Equatable {
     let name: String
     let owner: RepositoryOwner
     let description: String
