@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "WeatherApp",
+    name: "RepositoryList",
     platforms: [.iOS(.v16)],
     products: [
         .library(name: "RepositoryListPub", targets: ["RepositoryListPub"]),

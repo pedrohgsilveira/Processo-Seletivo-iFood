@@ -22,8 +22,8 @@ RepositoryListMutation
         event: RepositoryListEvent
     ) -> AnyPublisher<RepositoryListMutation, Never> {
         switch event {
-        case let .fetchRepositoryList(page):
-            return handleFetchRepositoryList(page)
+        case let .fetchRepositoryList:
+            return handleFetchRepositoryList(state.currentPage)
         }
     }
 
@@ -38,9 +38,10 @@ RepositoryListMutation
         case let .showRepositories(items):
             currentState.items = items
             currentState.screenState = .idle
+            currentState.currentPage += 1
         }
 
-        return state
+        return currentState
     }
 }
 
@@ -54,9 +55,9 @@ extension RepositoryListInteractor {
 
                     let mutation: RepositoryListMutation = .showRepositories(items)
 
-                    return Just(mutation).eraseToAnyPublisher()
+                    promise(.success(mutation))
                 } catch {
-                    return Just(.showError).eraseToAnyPublisher()
+                    promise(.success(.showError))
                 }
             }
         }

@@ -4,13 +4,15 @@ import Redux
 
 final class RepositoryListPresenter: Presenting<RepositoryListState, RepositoryListViewModel>, RepositoryListPresenting {
     private var cancellables: Set<AnyCancellable> = []
-    weak var viewController: RepositoryListViewControllerProtocol?
+    var viewController: RepositoryListViewControllerProtocol?
 
     override init() {
         super.init()
 
         output.sink { [weak self] viewModel in
             guard let self else { return }
+//            print(self.viewController)
+            print(viewModel)
             self.viewController?.configure(with: viewModel)
         }.store(in: &cancellables)
     }

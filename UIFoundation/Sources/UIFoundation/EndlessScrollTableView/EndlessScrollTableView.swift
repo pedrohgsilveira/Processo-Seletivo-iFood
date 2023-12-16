@@ -43,6 +43,7 @@ Adapter.Section.Item: Hashable {
         super.init(frame: .zero, style: .plain)
 
         setupTableView()
+        registerCells()
         configureDataSource()
     }
 

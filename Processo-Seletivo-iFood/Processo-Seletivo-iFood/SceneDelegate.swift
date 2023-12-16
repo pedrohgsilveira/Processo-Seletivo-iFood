@@ -5,18 +5,26 @@
 //  Created by Pedro Silveira on 14/12/23.
 //
 
+import MainApp
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private let navigationController = UINavigationController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = scene as? UIWindowScene else { return }
+
+        DependencyRegistering.buildDependencyGraph()
+
+        let coordinator = MainCoordinator()
+        coordinator.rootViewController = navigationController
+        coordinator.execute(MainCoordinatorEvent.openRepositoryList)
+
+        window = UIWindow(windowScene: scene)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = coordinator.rootViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -46,7 +54,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

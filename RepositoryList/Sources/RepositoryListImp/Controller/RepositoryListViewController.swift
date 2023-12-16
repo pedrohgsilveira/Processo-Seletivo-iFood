@@ -4,10 +4,7 @@ import UIKit
 final class RepositoryListViewController: UIViewController {
     private let interactor: RepositoryListInteractor
 
-    private let mainView = RepositoryListTableView(
-        didSelectRowHandler: { _ in },
-        didEndScroll: { }
-    )
+    private let mainView = RepositoryListView()
 
     init(
         interactor: RepositoryListInteractor
@@ -26,8 +23,8 @@ final class RepositoryListViewController: UIViewController {
         view = mainView
     }
 
-    override func viewDidLoad() {
-        interactor.execute(event: .fetchRepositoryList(page: 0))
+    func executeInitialRequest() {
+        interactor.execute(event: .fetchRepositoryList)
     }
 }
 
@@ -35,7 +32,7 @@ extension RepositoryListViewController: RepositoryListViewControllerProtocol {
     func configure(with viewModel: RepositoryListViewModel) {
         switch viewModel.screenState {
         case .idle:
-            mainView.appendSections(from: viewModel)
+            mainView.configure(with: viewModel)
             stopLoading()
 
         case .loading:
@@ -45,7 +42,7 @@ extension RepositoryListViewController: RepositoryListViewControllerProtocol {
             stopLoading()
             showErrorView { [weak self] in
                 guard let self else { return }
-                self.interactor.execute(event: .fetchRepositoryList(page: 0))
+                self.interactor.execute(event: .fetchRepositoryList)
             }
         }
     }

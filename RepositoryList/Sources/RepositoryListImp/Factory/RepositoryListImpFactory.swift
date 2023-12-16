@@ -3,8 +3,10 @@ import DependencyInjection
 import RepositoryListPub
 import UIKit
 
-public enum RepositoryListImpFactory: RepositoryListFactoryProtocol {
-    public static func make() -> UIViewController {
+public struct RepositoryListImpFactory: RepositoryListFactoryProtocol {
+    public init() {}
+
+    public func make() -> UIViewController {
         @Injected var client: NetworkClientProtocol
         @Injected var requestBuilder: URLRequestBuilderProtocol
 
@@ -17,6 +19,8 @@ public enum RepositoryListImpFactory: RepositoryListFactoryProtocol {
         let viewController = RepositoryListViewController(interactor: interactor)
 
         presenter.viewController = viewController
+
+        viewController.executeInitialRequest()
 
         return viewController
     }
