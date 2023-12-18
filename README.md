@@ -8,16 +8,18 @@ The base architecture of the project is a VIP. This architecture was chosen beca
 
 * The ViewController holds a strong reference to the Interactor and requests it to execute an event;
 * The Interactor holds a strong reference to the Presenter and after processing an command generates an event that can cause a change in state and process any side effects;
-* The Presenter holds a weak reference to the ViewController and after the state change it requests the ViewController to process the side effect, which can generate changes in the Layout;
+* The Presenter holds a weak reference to the ViewController and after the state is changed it requests the ViewController to process the new state, which can generate changes in the Layout;
 
 ```mermaid
 sequenceDiagram
     participant ViewController
     participant Interactor
     participant Presenter
-    ViewController->>Interactor: Send event
-    Interactor->>Presenter: Send side effect
-    Presenter-->>ViewController: Send new state to update the view
+    participant External Layers (e.g. Coordinator)
+    ViewController->>Interactor: Ask to handle an app event
+    Interactor->>Presenter: Send new state
+    Presenter-->>ViewController: Request the view to process the new state
+    Interactor->>External Layers (e.g. Coordinator): Request to handle a side effect
 ```
 
 For navigation, an event-based Coordinator model was used with associated actions that are processed by a ViewTransition. This architecture was chosen so that we could decouple navigation from the ViewController and get reusable objects with well-defined responsibilities, thus being agnostic and functioning as plug and play.
