@@ -7,6 +7,8 @@ final class RepositoryListTableViewCell: UITableViewCell {
         return String(describing: self)
     }
 
+    @AutoLayout private var informationContainer: UIStackView
+
     @AutoLayoutWithInit private var repositoryNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -24,9 +26,13 @@ final class RepositoryListTableViewCell: UITableViewCell {
         return label
     }()
 
+    @AutoLayout private var scoreContainer: UIStackView
+
     @AutoLayout private var forkScoreView: ScoreItemView
 
     @AutoLayout private var starScoreView: ScoreItemView
+
+    @AutoLayout private var scoreContainerSpacingView: UIView
 
     @AutoLayout private var profileView: UserProfileView
 
@@ -40,47 +46,28 @@ final class RepositoryListTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func setupCell(with viewModel: ViewModel) {
-
-    }
 }
 
 extension RepositoryListTableViewCell: ViewCodable {
     func buildViewHierarchy() {
-        contentView.addSubviews(
-            repositoryNameLabel, repositoryDescriptionLabel,
-            forkScoreView, starScoreView, profileView
-        )
+        contentView.addSubviews(informationContainer, profileView)
+
+        informationContainer.addArrangedSubviews(repositoryNameLabel, repositoryDescriptionLabel, scoreContainer)
+
+        scoreContainer.addArrangedSubviews(forkScoreView, starScoreView, scoreContainerSpacingView)
     }
 
     func setupConstraints() {
-        repositoryNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(24)
+        informationContainer.snp.makeConstraints { make in
+            make.centerY.equalTo(contentView.snp.centerY)
+            make.top.greaterThanOrEqualTo(contentView.snp.top).offset(24)
             make.leading.equalTo(contentView.snp.leading).offset(16)
-        }
-
-        repositoryDescriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(repositoryNameLabel.snp.bottom).offset(4)
-            make.width.equalTo(contentView.snp.width).multipliedBy(0.72)
-            make.leading.equalTo(contentView.snp.leading).offset(16)
-        }
-
-        forkScoreView.snp.makeConstraints { make in
-            make.top.equalTo(repositoryDescriptionLabel.snp.bottom).offset(4)
-            make.leading.equalTo(contentView.snp.leading).offset(16)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-24)
-        }
-
-        starScoreView.snp.makeConstraints { make in
-            make.top.equalTo(repositoryDescriptionLabel.snp.bottom).offset(4)
-            make.leading.equalTo(forkScoreView.snp.trailing).offset(8)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-24)
+            make.bottom.lessThanOrEqualTo(contentView.snp.bottom).offset(-24)
         }
 
         profileView.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.top).offset(24)
-            make.leading.equalTo(repositoryDescriptionLabel.snp.trailing).offset(12)
+            make.leading.equalTo(informationContainer.snp.trailing).offset(12)
             make.trailing.equalTo(contentView.snp.trailing).offset(-16)
             make.bottom.equalTo(contentView.snp.bottom).offset(-24)
         }
@@ -88,6 +75,12 @@ extension RepositoryListTableViewCell: ViewCodable {
 
     func setupAdditionalConfiguration() {
         contentView.backgroundColor = .white
+
+        informationContainer.axis = .vertical
+        informationContainer.spacing = 4
+
+        scoreContainer.axis = .horizontal
+        scoreContainer.spacing = 8
     }
 }
 

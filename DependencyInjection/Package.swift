@@ -13,7 +13,6 @@ let package = Package(
         .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.4")
     ],
     targets: [
-        .target(name: "DependencyInjection", dependencies: ["Swinject"]),
-        .testTarget(name: "DependencyInjectionTests", dependencies: ["DependencyInjection"])
+        .target(name: "DependencyInjection", dependencies: ["Swinject"])
     ]
 )

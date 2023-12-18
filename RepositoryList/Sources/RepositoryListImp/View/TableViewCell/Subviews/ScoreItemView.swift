@@ -7,7 +7,6 @@ final class ScoreItemView: LayoutView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .black
-        label.numberOfLines = 0
 
         return label
     }()
@@ -16,7 +15,6 @@ final class ScoreItemView: LayoutView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .black
-        label.numberOfLines = 0
 
         return label
     }()

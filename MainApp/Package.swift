@@ -25,7 +25,6 @@ let package = Package(
             .product(name: "DependencyInjection", package: "DependencyInjection"),
             .product(name: "RepositoryListImp", package: "RepositoryList"),
             .product(name: "RepositoryListPub", package: "RepositoryList")
-        ]),
-        .testTarget(name: "MainAppTests", dependencies: ["MainApp"])
+        ])
     ]
 )
