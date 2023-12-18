@@ -54,7 +54,7 @@ The modularization strategy chosen was that of a monorepo divided into Swift Pac
 
 A public module has only abstractions and simple models, not containing complex implementations. An implicit module, implements the abstractions of the public module.
 
-There are three types of modules in the project:
+There are four types of modules in the project:
 
 * Main -> It can depend on all modules, but none can depend on it. It does not have the separation into Public and Implicit;
 * UI -> It may depend on another Public Tool module, and any implicit feature module can depend on it;
